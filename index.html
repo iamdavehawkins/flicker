@@ -561,6 +561,175 @@
             opacity: 0.8;
         }
         
+        /* Lyrics Display */
+        .lyrics-player {
+            display: none;
+            padding: 12px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(232, 244, 248, 0.1);
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .lyrics-player.active {
+            display: block;
+        }
+        
+        .lyrics-scroll {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .lyric-line {
+            font-family: 'Degular Text', Georgia, serif;
+            transition: all 0.3s ease-out;
+            max-width: 100%;
+            line-height: 1.3;
+            padding: 0 10px;
+        }
+        
+        .lyric-intro {
+            font-family: 'Vulf Mono', 'Courier New', monospace;
+            font-size: 0.7em;
+            font-style: italic;
+            color: var(--color-star);
+            letter-spacing: 0.5px;
+            opacity: 0.8;
+        }
+        
+        .lyric-line.prev {
+            font-size: 0.8em;
+            color: var(--color-star);
+            opacity: 0.5;
+        }
+        
+        .lyric-line.current {
+            font-size: 1em;
+            color: var(--color-accent);
+            opacity: 1;
+        }
+        
+        .lyric-line.next {
+            font-size: 0.8em;
+            color: var(--color-star);
+            opacity: 0.5;
+        }
+        
+        .lyric-line.hidden {
+            opacity: 0;
+            height: 0;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Credits Link */
+        .credits-link {
+            font-family: 'Vulf Mono', 'Courier New', monospace;
+            font-size: 0.7em;
+            font-style: italic;
+            color: var(--color-star);
+            text-decoration: none;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: all 0.2s ease;
+            background: none;
+            border: none;
+            padding: 0;
+            margin-left: 10px;
+        }
+        
+        .credits-link:hover {
+            color: var(--color-accent);
+            opacity: 1;
+        }
+        
+        /* Credits Modal */
+        .credits-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .credits-modal.active {
+            display: flex;
+        }
+        
+        .credits-modal-content {
+            background: var(--color-void);
+            border: 1px solid var(--color-secondary);
+            border-radius: 8px;
+            padding: 24px;
+            max-width: 400px;
+            width: 100%;
+            position: relative;
+        }
+        
+        .credits-modal-close {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: none;
+            border: none;
+            color: var(--color-star);
+            font-size: 1.5em;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0;
+            transition: color 0.2s ease;
+        }
+        
+        .credits-modal-close:hover {
+            color: var(--color-accent);
+        }
+        
+        .credits-modal h3 {
+            font-family: 'Compadre Extended', Georgia, serif;
+            font-size: 1.3em;
+            color: var(--color-paper);
+            margin: 0 0 16px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .credits-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .credits-list li {
+            font-family: 'Degular Text', Georgia, serif;
+            font-size: 0.95em;
+            color: var(--color-paper);
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(79, 106, 137, 0.2);
+        }
+        
+        .credits-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .credits-role {
+            font-family: 'Vulf Mono', 'Courier New', monospace;
+            font-size: 0.8em;
+            font-style: italic;
+            color: var(--color-star);
+            display: block;
+            margin-bottom: 2px;
+        }
+        
+        .credits-name {
+            color: var(--color-accent);
+        }
+        
         /* Newsletter Section */
         .newsletter {
             background: var(--color-nebula);
@@ -814,6 +983,7 @@
                         <div class="track-artist">Dave Hawkins</div>
                     </div>
                     <div class="track-duration" id="trackDuration">4:37</div>
+                    <button class="credits-link" id="creditsLink">credits</button>
                 </div>
                 <div class="player-progress" id="playerProgress">
                     <div class="progress-container" id="progressContainer">
@@ -822,6 +992,13 @@
                     <div class="time-display">
                         <span id="currentTime">0:00</span>
                         <span id="totalTime">4:37</span>
+                    </div>
+                </div>
+                <div class="lyrics-player" id="lyricsPlayer">
+                    <div class="lyrics-scroll" id="lyricsScroll">
+                        <div class="lyric-line prev" id="lyricPrev"></div>
+                        <div class="lyric-line current" id="lyricCurrent"></div>
+                        <div class="lyric-line next" id="lyricNext"></div>
                     </div>
                 </div>
             </div>
@@ -943,6 +1120,18 @@
         <footer>
             <p>&copy; <script>document.write(new Date().getFullYear());</script> Dave Hawkins | <a href="https://links.iamdavehawkins.com">iamdavehawkins.com</a></p>
         </footer>
+
+    <!-- Credits Modal -->
+    <div class="credits-modal" id="creditsModal">
+        <div class="credits-modal-content">
+            <button class="credits-modal-close" id="creditsModalClose" aria-label="Close">&times;</button>
+            <h3>Flicker</h3>
+            <ul class="credits-list">
+                <li><span class="credits-role">Mixed by</span><span class="credits-name">Sean Kenney, Dad Mode Audio</span></li>
+                <li><span class="credits-role">Mastered by</span><span class="credits-name">Kevin Embleton</span></li>
+                <li><span class="credits-role">Drums</span><span class="credits-name">Derek Swink</span></li>
+            </ul>
+        </div>
     </div>
 
     <script>
@@ -953,11 +1142,113 @@
         const progressContainer = document.getElementById('progressContainer');
         const currentTimeEl = document.getElementById('currentTime');
         const totalTimeEl = document.getElementById('totalTime');
+        const lyricsPlayer = document.getElementById('lyricsPlayer');
+        const lyricPrev = document.getElementById('lyricPrev');
+        const lyricCurrent = document.getElementById('lyricCurrent');
+        const lyricNext = document.getElementById('lyricNext');
+        
+        const songTitle = "Flicker";
+        const artistName = "Dave Hawkins";
+        
+        const lyricsData = [
+            { time: 23.76, text: "It's time to board three two one" },
+            { time: 26.56, text: "In your eyes i thought i saw the sun the same" },
+            { time: 29.67, text: "Sun's shining in my eyes now" },
+            { time: 31.93, text: "I wish said goodbye a million times just to keep you" },
+            { time: 35.52, text: "In my arms, so harm'd have to" },
+            { time: 37.61, text: "Break through me too one day you knew this is" },
+            { time: 41.34, text: "What you'd do, gotta find your truth" },
+            { time: 43.96, text: "What it means to one but everyone" },
+            { time: 46.72, text: "Is gonna hold their breath" },
+            { time: 52.23, text: "Not the end" },
+            { time: 55.24, text: "Not the arc" },
+            { time: 58.12, text: "Just a flicker in the dark" },
+            { time: 64.07, text: "Scene by scene" },
+            { time: 67.02, text: "Cut quickly" },
+            { time: 70.03, text: "On a reel that won't repeat" },
+            { time: 84.64, text: "They paved the stars, they sold the sky" },
+            { time: 87.38, text: "Bought all the ships so only they could fly" },
+            { time: 90.26, text: "They wrote the rules, they hid the map" },
+            { time: 93.29, text: "They lock the doors, they don't look back" },
+            { time: 96.35, text: "They clip your wings, they say you're safe" },
+            { time: 99.20, text: "Then say you should say thanks for that" },
+            { time: 101.98, text: "Well you become a match, you become a key" },
+            { time: 105.18, text: "Make their kingdom catch, and everything" },
+            { time: 107.49, text: "Is gonna hold it's breath" },
+            { time: 113.10, text: "Not the end" },
+            { time: 116.03, text: "Not the arc" },
+            { time: 119.08, text: "Just a flicker in the dark" },
+            { time: 124.87, text: "Scene by scene" },
+            { time: 127.86, text: "Cut quickly" },
+            { time: 130.71, text: "On a reel that won't repeat" },
+            { time: 178.25, text: "Not the end" },
+            { time: 181.42, text: "Not the arc" },
+            { time: 184.27, text: "Just a flicker in the dark" },
+            { time: 190.01, text: "Scene by scene" },
+            { time: 193.25, text: "Cut quickly" },
+            { time: 196.19, text: "On a reel that won't repeat" },
+            { time: 221.14, text: "Oxygen holds you" },
+            { time: 224.19, text: "Just like i used to" },
+            { time: 227.16, text: "Oxygen holding you tight" },
+            { time: 233.17, text: "Oxygen holds you" },
+            { time: 236.01, text: "Just like i used to" },
+            { time: 239.18, text: "Oxygen holds you all night" }
+        ];
+        
+        let currentLyricIndex = -1;
         
         function formatTime(seconds) {
             const mins = Math.floor(seconds / 60);
             const secs = Math.floor(seconds % 60);
             return `${mins}:${secs.toString().padStart(2, '0')}`;
+        }
+        
+        function getCurrentLyricIndex(time) {
+            for (let i = lyricsData.length - 1; i >= 0; i--) {
+                if (time >= lyricsData[i].time) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+        
+        function updateLyrics(time) {
+            const newIndex = getCurrentLyricIndex(time);
+            
+            if (newIndex !== currentLyricIndex) {
+                currentLyricIndex = newIndex;
+                
+                if (currentLyricIndex > 0) {
+                    lyricPrev.textContent = lyricsData[currentLyricIndex - 1].text;
+                    lyricPrev.classList.remove('hidden', 'lyric-intro');
+                } else if (currentLyricIndex === 0) {
+                    lyricPrev.textContent = `${songTitle} — ${artistName} — Lyrics`;
+                    lyricPrev.classList.remove('hidden');
+                    lyricPrev.classList.add('lyric-intro');
+                } else {
+                    lyricPrev.textContent = '';
+                    lyricPrev.classList.add('hidden');
+                }
+                
+                if (currentLyricIndex >= 0) {
+                    lyricCurrent.textContent = lyricsData[currentLyricIndex].text;
+                    lyricCurrent.classList.remove('lyric-intro');
+                } else {
+                    lyricCurrent.textContent = `${songTitle} — ${artistName} — Lyrics`;
+                    lyricCurrent.classList.add('lyric-intro');
+                }
+                
+                if (currentLyricIndex < lyricsData.length - 1 && currentLyricIndex >= 0) {
+                    lyricNext.textContent = lyricsData[currentLyricIndex + 1].text;
+                    lyricNext.classList.remove('hidden');
+                } else if (currentLyricIndex === -1 && lyricsData.length > 0) {
+                    lyricNext.textContent = lyricsData[0].text;
+                    lyricNext.classList.remove('hidden');
+                } else {
+                    lyricNext.textContent = '';
+                    lyricNext.classList.add('hidden');
+                }
+            }
         }
         
         function updateProgress() {
@@ -966,6 +1257,7 @@
                 progressBar.style.width = percent + '%';
                 currentTimeEl.textContent = formatTime(audio.currentTime);
                 totalTimeEl.textContent = formatTime(audio.duration);
+                updateLyrics(audio.currentTime);
             }
         }
         
@@ -974,6 +1266,9 @@
                 audio.play();
                 playBtn.classList.add('playing');
                 playerProgress.classList.add('active');
+                lyricsPlayer.classList.add('active');
+                currentLyricIndex = -2; // Reset to force update
+                updateLyrics(audio.currentTime);
             } else {
                 audio.pause();
                 playBtn.classList.remove('playing');
@@ -997,8 +1292,29 @@
         audio.addEventListener('ended', () => {
             playBtn.classList.remove('playing');
             playerProgress.classList.remove('active');
+            lyricsPlayer.classList.remove('active');
             progressBar.style.width = '0%';
             currentTimeEl.textContent = '0:00';
+            currentLyricIndex = -1;
+        });
+        
+        // Credits Modal
+        const creditsLink = document.getElementById('creditsLink');
+        const creditsModal = document.getElementById('creditsModal');
+        const creditsModalClose = document.getElementById('creditsModalClose');
+        
+        creditsLink.addEventListener('click', () => {
+            creditsModal.classList.add('active');
+        });
+        
+        creditsModalClose.addEventListener('click', () => {
+            creditsModal.classList.remove('active');
+        });
+        
+        creditsModal.addEventListener('click', (e) => {
+            if (e.target === creditsModal) {
+                creditsModal.classList.remove('active');
+            }
         });
     </script>
 </body>
