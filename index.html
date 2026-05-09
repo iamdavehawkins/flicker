@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flicker - Dave Hawkins</title>
-    <meta name="description" content="Flicker by Dave Hawkins - a song about raising hopeful kids in a world ruled by billionaires and oligarchy. breaking free and achieving unthinkable things. Stream on Bandcamp, Spotify, Apple Music, and YouTube Music.">
-    <meta name="keywords" content="Flicker, Dave Hawkins, oligarchy, billionaires, hope, freedom, resistance, indie music, singer-songwriter, alternative, protest music, atmospheric, Bandcamp, streaming">
+    <meta name="description" content="Flicker by Dave Hawkins - just a flicker in the dark. A song about hope and resistance.">
+    <meta name="keywords" content="Flicker, Dave Hawkins, hope, resistance, indie music, Half Alive EP">
     <meta name="author" content="Dave Hawkins">
     <meta name="robots" content="index, follow">
     
@@ -13,1309 +13,418 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://flicker.iamdavehawkins.com/">
     <meta property="og:title" content="Flicker - Dave Hawkins">
-    <meta property="og:description" content="Flicker by Dave Hawkins - a song about raising hopeful kids in a world ruled by billionaires and oligarchy. Stream on all platforms.">
+    <meta property="og:description" content="Just a flicker in the dark. A song about hope and resistance.">
     <meta property="og:image" content="https://flicker.iamdavehawkins.com/Flicker - Album Cover.png">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://flicker.iamdavehawkins.com/">
     <meta property="twitter:title" content="Flicker - Dave Hawkins">
-    <meta property="twitter:description" content="Flicker by Dave Hawkins - a song about raising hopeful kids in a world ruled by billionaires and oligarchy.">
+    <meta property="twitter:description" content="Just a flicker in the dark. A song about hope and resistance.">
     <meta property="twitter:image" content="https://flicker.iamdavehawkins.com/Flicker - Album Cover.png">
     
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://flicker.iamdavehawkins.com/">
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="99efd3af-3c2e-490e-adc0-aa7a12c5f68a"></script>
     
     <link rel="icon" href="Flicker - Album Cover.png" type="image/png">
-    <style>
-        :root {
-            --color-primary: #9B4A34;
-            --color-secondary: #4F6A89;
-            --color-accent: #D8A34A;
-            --color-paper: #F4F0E6;
-            --color-charcoal: #222222;
-            --color-space: #0a0e1a;
-            --color-nebula: #1a2847;
-            --color-star: #e8f4f8;
-        }
-        
-        @font-face {
-            font-family: 'Degular Text';
-            src: url('../fonts/DegularText-Regular.woff2') format('woff2'),
-                 url('https://cdn.iamdavehawkins.com/DegularText-Regular.woff2') format('woff2');
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
-        }
-        
-        @font-face {
-            font-family: 'Compadre Extended';
-            src: url('../fonts/Compadre-Extended.woff2') format('woff2'),
-                 url('https://cdn.iamdavehawkins.com/Compadre-Extended.woff2') format('woff2');
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
-        }
-        
-        @font-face {
-            font-family: 'Vulf Mono';
-            src: url('../fonts/Vulf_Mono-Light_Italic_web.woff2') format('woff2'),
-                 url('https://cdn.iamdavehawkins.com/Vulf_Mono-Light_Italic_web.woff2') format('woff2');
-            font-weight: 300;
-            font-style: italic;
-            font-display: swap;
-        }
-        
-        @font-face {
-            font-family: 'Coniferous';
-            src: url('../fonts/Coniferous-Regular.woff2') format('woff2'),
-                 url('https://cdn.iamdavehawkins.com/Coniferous-Regular.woff2') format('woff2');
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
-        }
-        
-        * {
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Degular Text', Georgia, serif;
-            background-color: var(--color-space);
-            color: var(--color-paper);
-            margin: 0;
-            padding: 20px;
-            line-height: 1.6;
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-            overflow-x: hidden;
-        }
-        
-        /* Stars Background */
-        .stars-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-        }
-        
-        .stars {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                radial-gradient(2px 2px at 20% 30%, white, transparent),
-                radial-gradient(2px 2px at 60% 70%, white, transparent),
-                radial-gradient(2px 2px at 50% 50%, white, transparent),
-                radial-gradient(2px 2px at 80% 10%, white, transparent),
-                radial-gradient(2px 2px at 90% 60%, white, transparent),
-                radial-gradient(2px 2px at 30% 80%, white, transparent),
-                radial-gradient(2px 2px at 70% 20%, white, transparent),
-                radial-gradient(2px 2px at 40% 15%, white, transparent),
-                radial-gradient(2px 2px at 25% 55%, white, transparent),
-                radial-gradient(2px 2px at 75% 45%, white, transparent),
-                radial-gradient(2px 2px at 10% 25%, white, transparent),
-                radial-gradient(2px 2px at 95% 75%, white, transparent),
-                radial-gradient(2px 2px at 35% 90%, white, transparent),
-                radial-gradient(2px 2px at 65% 35%, white, transparent),
-                radial-gradient(2px 2px at 45% 65%, white, transparent),
-                radial-gradient(2px 2px at 85% 85%, white, transparent),
-                radial-gradient(2px 2px at 15% 40%, white, transparent),
-                radial-gradient(2px 2px at 55% 10%, white, transparent),
-                radial-gradient(2px 2px at 5% 95%, white, transparent),
-                radial-gradient(2px 2px at 92% 28%, white, transparent),
-                radial-gradient(2px 2px at 12% 68%, white, transparent),
-                radial-gradient(2px 2px at 48% 82%, white, transparent),
-                radial-gradient(2px 2px at 78% 38%, white, transparent),
-                radial-gradient(2px 2px at 33% 12%, white, transparent),
-                radial-gradient(2px 2px at 67% 92%, white, transparent),
-                radial-gradient(2px 2px at 8% 52%, white, transparent),
-                radial-gradient(2px 2px at 88% 18%, white, transparent),
-                radial-gradient(2px 2px at 22% 72%, white, transparent),
-                radial-gradient(2px 2px at 52% 28%, white, transparent),
-                radial-gradient(2px 2px at 82% 58%, white, transparent),
-                radial-gradient(2px 2px at 38% 48%, white, transparent),
-                radial-gradient(2px 2px at 18% 88%, white, transparent),
-                radial-gradient(2px 2px at 58% 8%, white, transparent),
-                radial-gradient(2px 2px at 98% 42%, white, transparent),
-                radial-gradient(2px 2px at 3% 78%, white, transparent),
-                radial-gradient(2px 2px at 43% 32%, white, transparent),
-                radial-gradient(2px 2px at 73% 62%, white, transparent),
-                radial-gradient(2px 2px at 28% 22%, white, transparent),
-                radial-gradient(2px 2px at 63% 52%, white, transparent),
-                radial-gradient(2px 2px at 13% 14%, white, transparent),
-                radial-gradient(2px 2px at 93% 88%, white, transparent),
-                radial-gradient(2px 2px at 37% 58%, white, transparent),
-                radial-gradient(2px 2px at 77% 8%, white, transparent),
-                radial-gradient(2px 2px at 7% 38%, white, transparent),
-                radial-gradient(2px 2px at 47% 98%, white, transparent),
-                radial-gradient(2px 2px at 87% 68%, white, transparent),
-                radial-gradient(2px 2px at 17% 28%, white, transparent),
-                radial-gradient(2px 2px at 57% 48%, white, transparent),
-                radial-gradient(2px 2px at 97% 12%, white, transparent),
-                radial-gradient(2px 2px at 27% 92%, white, transparent),
-                radial-gradient(2px 2px at 62% 18%, white, transparent),
-                radial-gradient(2px 2px at 2% 62%, white, transparent),
-                radial-gradient(2px 2px at 42% 42%, white, transparent),
-                radial-gradient(2px 2px at 72% 72%, white, transparent),
-                radial-gradient(2px 2px at 32% 2%, white, transparent),
-                radial-gradient(2px 2px at 68% 82%, white, transparent),
-                radial-gradient(2px 2px at 11% 33%, white, transparent),
-                radial-gradient(2px 2px at 51% 63%, white, transparent),
-                radial-gradient(2px 2px at 81% 23%, white, transparent),
-                radial-gradient(2px 2px at 21% 53%, white, transparent),
-                radial-gradient(2px 2px at 61% 93%, white, transparent),
-                radial-gradient(2px 2px at 91% 3%, white, transparent),
-                radial-gradient(2px 2px at 36% 73%, white, transparent),
-                radial-gradient(2px 2px at 76% 13%, white, transparent),
-                radial-gradient(2px 2px at 6% 83%, white, transparent),
-                radial-gradient(3px 3px at 15% 60%, rgba(232, 244, 248, 0.8), transparent),
-                radial-gradient(3px 3px at 85% 40%, rgba(232, 244, 248, 0.8), transparent),
-                radial-gradient(3px 3px at 42% 78%, rgba(232, 244, 248, 0.8), transparent),
-                radial-gradient(3px 3px at 68% 22%, rgba(232, 244, 248, 0.8), transparent),
-                radial-gradient(3px 3px at 24% 34%, rgba(232, 244, 248, 0.7), transparent),
-                radial-gradient(3px 3px at 54% 54%, rgba(232, 244, 248, 0.7), transparent),
-                radial-gradient(3px 3px at 84% 74%, rgba(232, 244, 248, 0.7), transparent),
-                radial-gradient(3px 3px at 14% 84%, rgba(232, 244, 248, 0.7), transparent),
-                radial-gradient(2.5px 2.5px at 28% 48%, rgba(216, 163, 74, 0.6), transparent),
-                radial-gradient(2.5px 2.5px at 72% 58%, rgba(79, 106, 137, 0.6), transparent),
-                radial-gradient(2.5px 2.5px at 44% 26%, rgba(216, 163, 74, 0.5), transparent),
-                radial-gradient(2.5px 2.5px at 66% 86%, rgba(79, 106, 137, 0.5), transparent);
-            background-size: 
-                200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%,
-                200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%,
-                200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%,
-                200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%,
-                200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%,
-                200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%,
-                200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%,
-                200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%,
-                200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%,
-                300% 300%, 300% 300%, 300% 300%, 300% 300%, 300% 300%, 300% 300%, 300% 300%, 300% 300%,
-                250% 250%, 250% 250%, 250% 250%, 250% 250%;
-            background-position: 0% 0%;
-            opacity: 0.6;
-        }
-        
-        .stars-layer-1 {
-            animation: twinkle 4s ease-in-out infinite;
-        }
-        
-        .stars-layer-2 {
-            animation: twinkle 6s ease-in-out infinite reverse;
-            opacity: 0.4;
-        }
-        
-        .stars-layer-3 {
-            animation: drift 20s linear infinite;
-            opacity: 0.3;
-        }
-        
-        @keyframes twinkle {
-            0%, 100% { opacity: 0.6; }
-            50% { opacity: 0.3; }
-        }
-        
-        @keyframes drift {
-            from { background-position: 0% 0%; }
-            to { background-position: 100% 100%; }
-        }
-        
-        @media (prefers-reduced-motion: reduce) {
-            .stars-layer-1,
-            .stars-layer-2,
-            .stars-layer-3 {
-                animation: none;
-            }
-        }
-        
-        /* Content Container */
-        .content {
-            position: relative;
-            z-index: 1;
-        }
-        
-        /* Header */
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-            padding: 30px 0;
-            position: relative;
-        }
-        
-        header::before,
-        header::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60%;
-            height: 1px;
-            background: linear-gradient(90deg, 
-                transparent 0%, 
-                var(--color-star) 50%, 
-                transparent 100%);
-            opacity: 0.2;
-        }
-        
-        header::before {
-            top: 0;
-        }
-        
-        header::after {
-            bottom: 0;
-        }
-        
-        .album-art-container {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-        
-        .album-art {
-            width: 350px;
-            height: 350px;
-            border-radius: 4px;
-            box-shadow: 
-                0 0 0 1px rgba(232, 244, 248, 0.3),
-                0 0 0 2px var(--color-space),
-                0 0 20px rgba(79, 106, 137, 0.4),
-                0 8px 32px rgba(0, 0, 0, 0.7);
-            display: block;
-        }
-        
-        /* Orbital glow effect */
-        @keyframes orbitalGlow {
-            0%, 100% { 
-                box-shadow: 
-                    0 0 20px rgba(232, 244, 248, 0.2),
-                    0 0 40px rgba(79, 106, 137, 0.1);
-            }
-            50% { 
-                box-shadow: 
-                    0 0 30px rgba(232, 244, 248, 0.3),
-                    0 0 60px rgba(79, 106, 137, 0.2);
-            }
-        }
-        
-        .album-art-container::after {
-            content: '';
-            position: absolute;
-            inset: -8px;
-            border-radius: 50%;
-            border: 1px solid var(--color-star);
-            opacity: 0.1;
-            animation: orbitalGlow 5s ease-in-out infinite;
-            pointer-events: none;
-        }
-        
-        h1 {
-            font-family: 'Compadre Extended', Georgia, serif;
-            font-size: 4em;
-            margin: 10px 0;
-            letter-spacing: 3px;
-            color: var(--color-paper);
-            text-transform: uppercase;
-            text-shadow: 0 0 20px rgba(232, 244, 248, 0.3);
-        }
-        
-        .subtitle {
-            font-family: 'Degular Text', Georgia, serif;
-            font-size: 1.2em;
-            color: var(--color-star);
-            font-weight: normal;
-            letter-spacing: 0.5px;
-            margin-bottom: 10px;
-        }
-        
-        .treatment-label {
-            font-family: 'Vulf Mono', 'Courier New', monospace;
-            font-size: 0.75em;
-            color: var(--color-accent);
-            font-style: italic;
-            letter-spacing: 2px;
-            text-transform: lowercase;
-            opacity: 0.7;
-            margin-top: 5px;
-        }
-        
-        /* Section Styles */
-        .section {
-            margin: 20px 0;
-            padding: 20px;
-            background: rgba(26, 40, 71, 0.3);
-            border: 1px solid rgba(79, 106, 137, 0.3);
-            border-radius: 8px;
-            position: relative;
-            backdrop-filter: blur(10px);
-        }
-        
-        .section h2 {
-            font-family: 'Degular Text', Georgia, serif;
-            font-size: 1.5em;
-            color: var(--color-accent);
-            border-bottom: 1px solid rgba(216, 163, 74, 0.3);
-            padding-bottom: 8px;
-            margin: 0 0 15px 0;
-            letter-spacing: 0.5px;
-            text-transform: lowercase;
-        }
-        
-        /* Streaming Links */
-        .stream-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 12px;
-            margin-top: 15px;
-        }
-        
-        .stream-link {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 16px 10px;
-            background: var(--color-primary);
-            color: var(--color-paper);
-            text-decoration: none;
-            border-radius: 6px;
-            border: 1px solid rgba(232, 244, 248, 0.1);
-            transition: all 0.3s ease;
-            font-family: 'Degular Text', Georgia, serif;
-            font-size: 0.9em;
-            font-weight: bold;
-            letter-spacing: 0.5px;
-            min-height: 90px;
-        }
-        
-        .stream-link:hover {
-            background: var(--color-accent);
-            color: var(--color-charcoal);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 16px rgba(216, 163, 74, 0.4);
-        }
-        
-        .stream-link:focus-visible {
-            outline: 2px solid var(--color-accent);
-            outline-offset: 2px;
-        }
-        
-        .stream-link svg {
-            width: 32px;
-            height: 32px;
-            fill: currentColor;
-            margin-bottom: 8px;
-        }
-        
-        /* Custom Audio Player */
-        .audio-player {
-            margin: 20px 0;
-            background: rgba(26, 40, 71, 0.4);
-            border: 1px solid rgba(79, 106, 137, 0.4);
-            border-radius: 8px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .audio-player::before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            background-image: 
-                radial-gradient(2px 2px at 20% 30%, rgba(232, 244, 248, 0.15), transparent),
-                radial-gradient(2px 2px at 70% 65%, rgba(232, 244, 248, 0.15), transparent),
-                radial-gradient(2px 2px at 40% 80%, rgba(232, 244, 248, 0.15), transparent),
-                radial-gradient(2px 2px at 80% 10%, rgba(232, 244, 248, 0.15), transparent);
-            z-index: 0;
-            pointer-events: none;
-            opacity: 0.6;
-        }
-        
-        .player-main {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 15px 20px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .play-btn {
-            width: 52px;
-            height: 52px;
-            border-radius: 50%;
-            background: var(--color-primary);
-            border: 2px solid rgba(232, 244, 248, 0.3);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.2s ease;
-            flex-shrink: 0;
-        }
-        
-        .play-btn:hover {
-            background: var(--color-accent);
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(216, 163, 74, 0.4);
-        }
-        
-        .play-btn:focus-visible {
-            outline: 2px solid var(--color-accent);
-            outline-offset: 2px;
-        }
-        
-        .play-btn svg {
-            width: 22px;
-            height: 22px;
-            fill: var(--color-paper);
-        }
-        
-        .play-btn:hover svg {
-            fill: var(--color-charcoal);
-        }
-        
-        .play-btn .icon-pause {
-            display: none;
-        }
-        
-        .play-btn.playing .icon-play {
-            display: none;
-        }
-        
-        .play-btn.playing .icon-pause {
-            display: block;
-        }
-        
-        .track-info {
-            flex: 1;
-            min-width: 0;
-        }
-        
-        .track-title {
-            font-family: 'Degular Text', Georgia, serif;
-            font-size: 1.1em;
-            color: var(--color-paper);
-            margin-bottom: 2px;
-        }
-        
-        .track-artist {
-            font-family: 'Vulf Mono', 'Courier New', monospace;
-            font-size: 0.75em;
-            font-style: italic;
-            color: var(--color-star);
-            opacity: 0.8;
-        }
-        
-        .track-duration {
-            font-family: 'Vulf Mono', 'Courier New', monospace;
-            font-size: 0.8em;
-            font-style: italic;
-            color: var(--color-accent);
-            flex-shrink: 0;
-        }
-        
-        /* Progress Section */
-        .player-progress {
-            display: none;
-            padding: 0 20px 15px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .player-progress.active {
-            display: block;
-        }
-        
-        .progress-container {
-            width: 100%;
-            height: 6px;
-            background: rgba(79, 106, 137, 0.4);
-            border-radius: 3px;
-            cursor: pointer;
-            margin-bottom: 8px;
-        }
-        
-        .progress-bar {
-            height: 100%;
-            background: var(--color-accent);
-            border-radius: 3px;
-            width: 0%;
-            transition: width 0.1s linear;
-        }
-        
-        .time-display {
-            display: flex;
-            justify-content: space-between;
-            font-family: 'Vulf Mono', 'Courier New', monospace;
-            font-size: 0.7em;
-            font-style: italic;
-            color: var(--color-star);
-            opacity: 0.8;
-        }
-        
-        /* Lyrics Display */
-        .lyrics-player {
-            display: none;
-            padding: 12px 20px;
-            text-align: center;
-            border-top: 1px solid rgba(232, 244, 248, 0.1);
-            overflow: hidden;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .lyrics-player.active {
-            display: block;
-        }
-        
-        .lyrics-scroll {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 4px;
-        }
-        
-        .lyric-line {
-            font-family: 'Degular Text', Georgia, serif;
-            transition: all 0.3s ease-out;
-            max-width: 100%;
-            line-height: 1.3;
-            padding: 0 10px;
-        }
-        
-        .lyric-intro {
-            font-family: 'Vulf Mono', 'Courier New', monospace;
-            font-size: 0.7em;
-            font-style: italic;
-            color: var(--color-star);
-            letter-spacing: 0.5px;
-            opacity: 0.8;
-        }
-        
-        .lyric-line.prev {
-            font-size: 0.8em;
-            color: var(--color-star);
-            opacity: 0.5;
-        }
-        
-        .lyric-line.current {
-            font-size: 1em;
-            color: var(--color-accent);
-            opacity: 1;
-        }
-        
-        .lyric-line.next {
-            font-size: 0.8em;
-            color: var(--color-star);
-            opacity: 0.5;
-        }
-        
-        .lyric-line.hidden {
-            opacity: 0;
-            height: 0;
-            margin: 0;
-            padding: 0;
-        }
-        
-        /* Credits Link */
-        .credits-link {
-            font-family: 'Vulf Mono', 'Courier New', monospace;
-            font-size: 0.7em;
-            font-style: italic;
-            color: var(--color-star);
-            text-decoration: none;
-            cursor: pointer;
-            opacity: 0.8;
-            transition: all 0.2s ease;
-            background: none;
-            border: none;
-            padding: 0;
-            margin-left: 10px;
-        }
-        
-        .credits-link:hover {
-            color: var(--color-accent);
-            opacity: 1;
-        }
-        
-        /* Credits Modal */
-        .credits-modal {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.8);
-            z-index: 1000;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        
-        .credits-modal.active {
-            display: flex;
-        }
-        
-        .credits-modal-content {
-            background: var(--color-void);
-            border: 1px solid var(--color-secondary);
-            border-radius: 8px;
-            padding: 24px;
-            max-width: 400px;
-            width: 100%;
-            position: relative;
-        }
-        
-        .credits-modal-close {
-            position: absolute;
-            top: 12px;
-            right: 12px;
-            background: none;
-            border: none;
-            color: var(--color-star);
-            font-size: 1.5em;
-            cursor: pointer;
-            line-height: 1;
-            padding: 0;
-            transition: color 0.2s ease;
-        }
-        
-        .credits-modal-close:hover {
-            color: var(--color-accent);
-        }
-        
-        .credits-modal h3 {
-            font-family: 'Compadre Extended', Georgia, serif;
-            font-size: 1.3em;
-            color: var(--color-paper);
-            margin: 0 0 16px 0;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .credits-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .credits-list li {
-            font-family: 'Degular Text', Georgia, serif;
-            font-size: 0.95em;
-            color: var(--color-paper);
-            padding: 8px 0;
-            border-bottom: 1px solid rgba(79, 106, 137, 0.2);
-        }
-        
-        .credits-list li:last-child {
-            border-bottom: none;
-        }
-        
-        .credits-role {
-            font-family: 'Vulf Mono', 'Courier New', monospace;
-            font-size: 0.8em;
-            font-style: italic;
-            color: var(--color-star);
-            display: block;
-            margin-bottom: 2px;
-        }
-        
-        .credits-name {
-            color: var(--color-accent);
-        }
-        
-        /* Newsletter Section */
-        .newsletter {
-            background: var(--color-nebula);
-            border: 1px solid rgba(79, 106, 137, 0.5);
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
-        }
-        
-        .newsletter h3 {
-            font-family: 'Degular Text', Georgia, serif;
-            color: var(--color-paper);
-            margin: 0 0 10px 0;
-            font-size: 1.2em;
-            letter-spacing: 0.5px;
-        }
-        
-        .newsletter p {
-            font-family: 'Vulf Mono', 'Courier New', monospace;
-            font-size: 0.85em;
-            color: var(--color-star);
-            opacity: 0.9;
-            margin: 0 0 15px 0;
-            font-style: italic;
-        }
-        
-        .form-group {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        
-        .newsletter input[type="email"] {
-            padding: 12px 15px;
-            border: 1px solid rgba(232, 244, 248, 0.3);
-            border-radius: 5px;
-            font-size: 16px;
-            min-width: 250px;
-            font-family: 'Degular Text', Georgia, serif;
-            background: rgba(10, 14, 26, 0.5);
-            color: var(--color-paper);
-        }
-        
-        .newsletter input[type="email"]:focus-visible {
-            outline: 2px solid var(--color-accent);
-            outline-offset: 1px;
-        }
-        
-        .newsletter input[type="submit"] {
-            padding: 12px 24px;
-            background: var(--color-primary);
-            color: var(--color-paper);
-            border: 1px solid rgba(232, 244, 248, 0.2);
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-            font-family: 'Degular Text', Georgia, serif;
-            transition: all 0.3s ease;
-            letter-spacing: 0.5px;
-        }
-        
-        .newsletter input[type="submit"]:hover {
-            background: var(--color-accent);
-            color: var(--color-charcoal);
-        }
-        
-        .newsletter input[type="submit"]:focus-visible {
-            outline: 2px solid var(--color-accent);
-            outline-offset: 2px;
-        }
-        
-        /* Lyrics Section */
-        .lyrics-section {
-            background: rgba(26, 40, 71, 0.2);
-            border: 1px solid rgba(79, 106, 137, 0.3);
-        }
-        
-        .lyrics-content {
-            font-family: 'Degular Text', Georgia, serif;
-            font-size: 1.05em;
-            line-height: 1.9;
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .lyrics-verse {
-            margin: 20px 0;
-            padding: 15px;
-            background: rgba(0, 0, 0, 0.3);
-            border-left: 2px solid rgba(232, 244, 248, 0.2);
-            border-radius: 4px;
-            opacity: 0.9;
-        }
-        
-        .lyrics-chorus {
-            font-family: 'Coniferous', Georgia, serif;
-            font-size: 1.15em;
-            font-style: italic;
-            color: var(--color-star);
-            margin: 25px 0;
-            padding: 20px;
-            background: rgba(232, 244, 248, 0.05);
-            border: 1px solid rgba(232, 244, 248, 0.2);
-            border-radius: 6px;
-        }
-        
-        .lyrics-bridge {
-            font-family: 'Vulf Mono', 'Courier New', monospace;
-            font-size: 0.9em;
-            font-style: italic;
-            color: var(--color-accent);
-            margin: 30px 0;
-            padding: 25px;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 6px;
-            border: 1px dashed rgba(216, 163, 74, 0.3);
-        }
-        
-        /* Footer */
-        footer {
-            font-family: 'Vulf Mono', 'Courier New', monospace;
-            font-size: 0.85em;
-            font-weight: 300;
-            font-style: italic;
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px 0;
-            border-top: 1px solid rgba(79, 106, 137, 0.3);
-            color: var(--color-accent);
-            position: relative;
-            z-index: 1;
-        }
-        
-        footer a {
-            color: var(--color-accent);
-            text-decoration: none;
-        }
-        
-        footer a:hover {
-            color: var(--color-paper);
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            body {
-                padding: 15px;
-            }
-            
-            h1 {
-                font-size: 3em;
-                letter-spacing: 2px;
-            }
-            
-            .album-art {
-                width: 280px;
-                height: 280px;
-            }
-            
-            .stream-grid {
-                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-                gap: 10px;
-            }
-            
-            .stream-link {
-                padding: 14px 8px;
-                min-height: 85px;
-                font-size: 0.85em;
-            }
-            
-            .stream-link svg {
-                width: 28px;
-                height: 28px;
-            }
-            
-            .section {
-                padding: 15px;
-            }
-            
-            .lyrics-content {
-                font-size: 1em;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2.5em;
-                letter-spacing: 1px;
-            }
-            
-            .album-art {
-                width: 240px;
-                height: 240px;
-            }
-            
-            .stream-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .form-group {
-                flex-direction: column;
-                gap: 12px;
-            }
-            
-            .newsletter input[type="email"] {
-                min-width: 100%;
-            }
-            
-            .newsletter input[type="submit"] {
-                width: 100%;
-            }
-        }
-    </style>
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="99efd3af-3c2e-490e-adc0-aa7a12c5f68a"></script>
 </head>
-<body>
-    <!-- Stars Background -->
-    <div class="stars-container">
-        <div class="stars stars-layer-1"></div>
-        <div class="stars stars-layer-2"></div>
-        <div class="stars stars-layer-3"></div>
-    </div>
+<body bgcolor="#0a0e1a" text="#e8f0f8" link="#88ccff" vlink="#6699cc" alink="#ffdd88">
 
-    <!-- Main Content -->
-    <div class="content">
-        <header>
-            <div class="album-art-container">
-                <img src="Flicker - Album Cover.png" alt="Flicker Album Art" class="album-art">
-            </div>
-            <h1>Flicker</h1>
-            <p class="subtitle">Dave Hawkins</p>
-            <p class="treatment-label">a flicker in the dark</p>
-        </header>
+<center>
 
-        <div class="section">
-            <h2>listen now</h2>
-            <div class="audio-player" id="audioPlayer">
-                <div class="player-main">
-                    <button class="play-btn" id="playBtn" aria-label="Play Flicker">
-                        <svg class="icon-play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z"/>
-                        </svg>
-                        <svg class="icon-pause" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
-                        </svg>
-                    </button>
-                    <div class="track-info">
-                        <div class="track-title">Flicker</div>
-                        <div class="track-artist">Dave Hawkins</div>
-                    </div>
-                    <div class="track-duration" id="trackDuration">4:37</div>
-                    <button class="credits-link" id="creditsLink">credits</button>
-                </div>
-                <div class="player-progress" id="playerProgress">
-                    <div class="progress-container" id="progressContainer">
-                        <div class="progress-bar" id="progressBar"></div>
-                    </div>
-                    <div class="time-display">
-                        <span id="currentTime">0:00</span>
-                        <span id="totalTime">4:37</span>
-                    </div>
-                </div>
-                <div class="lyrics-player" id="lyricsPlayer">
-                    <div class="lyrics-scroll" id="lyricsScroll">
-                        <div class="lyric-line prev" id="lyricPrev"></div>
-                        <div class="lyric-line current" id="lyricCurrent"></div>
-                        <div class="lyric-line next" id="lyricNext"></div>
-                    </div>
-                </div>
-            </div>
-            <audio id="audio" preload="metadata">
-                <source src="03 Flicker.wav" type="audio/wav">
-            </audio>
-        </div>
+<table width="100%" cellpadding="10" cellspacing="0" border="0">
+<tr><td bgcolor="#101828">
 
-        <div class="section">
-            <h2>stream or buy on bandcamp</h2>
-            <div class="stream-grid">
-                <a href="https://iamdavehawkins.bandcamp.com/track/flicker" class="stream-link" target="_blank" rel="noopener" title="Bandcamp">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M0 18.75l7.437-13.5H24l-7.438 13.5H0z"/>
-                    </svg>
-                    Bandcamp
-                </a>
-            </div>
-        </div>
+<!-- STARS -->
+<center>
+<font size="1" color="#334466">
+.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.
+</font>
+</center>
 
-        <div class="section">
-            <h2>stream from billionaires</h2>
-            <div class="stream-grid">
-                <a href="https://open.spotify.com/track/1AFSQtX76sTkhebtrmSxjf?si=fd6f76fdc3f8490c" class="stream-link" target="_blank" rel="noopener" title="Spotify">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
-                        <path d="M248 8C111.1 8 0 119.1 0 256s111.1 248 248 248 248-111.1 248-248S384.9 8 248 8zm100.7 364.9c-4.2 0-6.8-1.3-10.7-3.6-62.4-37.6-135-39.2-206.7-24.5-3.9 1-9 2.6-11.9 2.6-9.7 0-15.8-7.7-15.8-15.8 0-10.3 6.1-15.2 13.6-16.8 81.9-18.1 165.6-16.5 237 30.6 6.1 3.9 9.7 7.4 9.7 16.5s-7.1 15.4-15.2 15.4zm26.9-65.6c-5.2 0-8.7-2.3-12.3-4.2-62.5-37-155.7-51.9-238.6-29.4-4.8 1.3-7.4 2.6-11.9 2.6-10.7 0-19.4-8.7-19.4-19.4s5.2-17.8 15.5-20.7c27.8-7.8 56.2-13.6 97.8-13.6 64.9 0 127.6 16.1 177 45.5 8.1 4.8 11.3 11 11.3 19.7-.1 10.8-8.5 19.5-19.4 19.5zm31-76.2c-5.2 0-8.4-1.3-12.9-3.9-71.2-42.5-198.5-52.7-280.9-29.7-3.6 1-8.1 2.6-12.9 2.6-13.2 0-23.3-10.3-23.3-23.6 0-13.6 8.4-21.3 17.4-23.9 35.2-10.3 74.6-15.2 117.5-15.2 73 0 149.5 15.2 205.4 47.8 7.8 4.5 12.9 10.7 12.9 22.6 0 13.6-11 23.3-23.2 23.3z"/>
-                    </svg>
-                    Spotify
-                </a>
-                <a href="https://music.apple.com/us/album/flicker/1848625463?i=1848625464" class="stream-link" target="_blank" rel="noopener" title="Apple Music">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                        <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
-                    </svg>
-                    Apple Music
-                </a>
-                <a href="https://music.youtube.com/playlist?list=OLAK5uy_l5l8P5_IuIfdZQzPHjVf-rr2HlhxLJhb8&si=5SD_vJ09jX-yokR6" class="stream-link" target="_blank" rel="noopener" title="YouTube Music">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                        <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/>
-                    </svg>
-                    YouTube Music
-                </a>
-            </div>
-        </div>
+<br>
 
-        <div class="section newsletter">
-            <form action="https://buttondown.com/api/emails/embed-subscribe/iamdavehawkins" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/iamdavehawkins', 'popupwindow')" class="embeddable-buttondown-form">
-                <h3>email list</h3>
-                <p>get notified of new releases + occasional musings</p>
-                <div class="form-group">
-                    <input type="email" name="email" id="bd-email" placeholder="your@email.com" required />
-                    <input type="hidden" value="1" name="embed" />
-                    <input type="submit" value="Subscribe" />
-                </div>
-            </form>
-        </div>
+<!-- HEADER -->
+<center>
+<table cellpadding="5" cellspacing="0" border="1" bordercolor="#334466">
+<tr><td bgcolor="#182030" align="center">
+<font size="1" color="#6688aa">a song about</font>
+<font size="2" color="#88aacc"><b>HOPE &amp; RESISTANCE</b></font>
+</td></tr>
+</table>
+</center>
 
-        <div class="section lyrics-section">
-            <h2>from the song</h2>
-            <div class="lyrics-content">
-                <div class="lyrics-verse">
-                    it's time to board three two one, in your eyes i thought i saw the sun<br>
-                    the same sun's shining in my eyes now<br>
-                    i wish said goodbye a million times just to keep you in my arms
-                </div>
-                
-                <div class="lyrics-verse">
-                    so harm'd have to break through me too<br>
-                    one day you knew this is what you'd do<br>
-                    gotta find your truth, what it means to one<br>
-                    but everyone is gonna hold their breath
-                </div>
-                
-                <div class="lyrics-chorus">
-                    not the end<br>
-                    not the arc<br>
-                    just a flicker in the dark<br>
-                    <br>
-                    scene by scene<br>
-                    cut quickly<br>
-                    on a reel that won't repeat
-                </div>
-                
-                <div class="lyrics-verse">
-                    they paved the stars, they sold the sky<br>
-                    bought all the ships so only they could fly<br>
-                    they wrote the rules, they hid the map<br>
-                    they lock the doors, they don't look back
-                </div>
-                
-                <div class="lyrics-verse">
-                    they clip your wings, they say you're safe<br>
-                    then say you should say thanks for that<br>
-                    well you become a match, you become a key<br>
-                    make their kingdom catch, and everything is gonna hold it's breath
-                </div>
-                
-                <div class="lyrics-chorus">
-                    not the end<br>
-                    not the arc<br>
-                    just a flicker in the dark<br>
-                    <br>
-                    scene by scene<br>
-                    cut quickly<br>
-                    on a reel that won't repeat
-                </div>
-                
-                <div class="lyrics-bridge">
-                    oxygen holds you<br>
-                    just like i used to<br>
-                    oxygen holding you tight<br>
-                    <br>
-                    oxygen holds you<br>
-                    just like i used to<br>
-                    oxygen holds you all night
-                </div>
-            </div>
-        </div>
+<hr size="1" color="#223344" noshade>
 
-        <footer>
-            <p>&copy; <script>document.write(new Date().getFullYear());</script> Dave Hawkins | <a href="https://links.iamdavehawkins.com">iamdavehawkins.com</a></p>
-        </footer>
+<!-- TITLE -->
+<center>
+<img src="Flicker - Album Cover.png" alt="Flicker Album Art" width="160" border="1">
+<br><br>
+<font size="5" color="#e8f4f8"><b>F L I C K E R</b></font>
+<br>
+<font size="2" color="#88aacc">Dave Hawkins &bull; Half Alive EP</font>
+<br><br>
+<marquee behavior="scroll" direction="left" scrollamount="1" width="100%">
+<font size="1" color="#445566"><i>. * . just a flicker in the dark . * .</i></font>
+</marquee>
+</center>
 
-    <!-- Credits Modal -->
-    <div class="credits-modal" id="creditsModal">
-        <div class="credits-modal-content">
-            <button class="credits-modal-close" id="creditsModalClose" aria-label="Close">&times;</button>
-            <h3>Flicker</h3>
-            <ul class="credits-list">
-                <li><span class="credits-role">Mixed by</span><span class="credits-name">Sean Kenney, Dad Mode Audio</span></li>
-                <li><span class="credits-role">Mastered by</span><span class="credits-name">Kevin Embleton</span></li>
-                <li><span class="credits-role">Drums</span><span class="credits-name">Derek Swink</span></li>
-            </ul>
-        </div>
-    </div>
+<hr size="2" width="60%" color="#334466" noshade>
 
-    <script>
-        const audio = document.getElementById('audio');
-        const playBtn = document.getElementById('playBtn');
-        const playerProgress = document.getElementById('playerProgress');
-        const progressBar = document.getElementById('progressBar');
-        const progressContainer = document.getElementById('progressContainer');
-        const currentTimeEl = document.getElementById('currentTime');
-        const totalTimeEl = document.getElementById('totalTime');
-        const lyricsPlayer = document.getElementById('lyricsPlayer');
-        const lyricPrev = document.getElementById('lyricPrev');
-        const lyricCurrent = document.getElementById('lyricCurrent');
-        const lyricNext = document.getElementById('lyricNext');
-        
-        const songTitle = "Flicker";
-        const artistName = "Dave Hawkins";
-        
-        const lyricsData = [
-            { time: 23.76, text: "It's time to board three two one" },
-            { time: 26.56, text: "In your eyes i thought i saw the sun the same" },
-            { time: 29.67, text: "Sun's shining in my eyes now" },
-            { time: 31.93, text: "I wish said goodbye a million times just to keep you" },
-            { time: 35.52, text: "In my arms, so harm'd have to" },
-            { time: 37.61, text: "Break through me too one day you knew this is" },
-            { time: 41.34, text: "What you'd do, gotta find your truth" },
-            { time: 43.96, text: "What it means to one but everyone" },
-            { time: 46.72, text: "Is gonna hold their breath" },
-            { time: 52.23, text: "Not the end" },
-            { time: 55.24, text: "Not the arc" },
-            { time: 58.12, text: "Just a flicker in the dark" },
-            { time: 64.07, text: "Scene by scene" },
-            { time: 67.02, text: "Cut quickly" },
-            { time: 70.03, text: "On a reel that won't repeat" },
-            { time: 84.64, text: "They paved the stars, they sold the sky" },
-            { time: 87.38, text: "Bought all the ships so only they could fly" },
-            { time: 90.26, text: "They wrote the rules, they hid the map" },
-            { time: 93.29, text: "They lock the doors, they don't look back" },
-            { time: 96.35, text: "They clip your wings, they say you're safe" },
-            { time: 99.20, text: "Then say you should say thanks for that" },
-            { time: 101.98, text: "Well you become a match, you become a key" },
-            { time: 105.18, text: "Make their kingdom catch, and everything" },
-            { time: 107.49, text: "Is gonna hold it's breath" },
-            { time: 113.10, text: "Not the end" },
-            { time: 116.03, text: "Not the arc" },
-            { time: 119.08, text: "Just a flicker in the dark" },
-            { time: 124.87, text: "Scene by scene" },
-            { time: 127.86, text: "Cut quickly" },
-            { time: 130.71, text: "On a reel that won't repeat" },
-            { time: 178.25, text: "Not the end" },
-            { time: 181.42, text: "Not the arc" },
-            { time: 184.27, text: "Just a flicker in the dark" },
-            { time: 190.01, text: "Scene by scene" },
-            { time: 193.25, text: "Cut quickly" },
-            { time: 196.19, text: "On a reel that won't repeat" },
-            { time: 221.14, text: "Oxygen holds you" },
-            { time: 224.19, text: "Just like i used to" },
-            { time: 227.16, text: "Oxygen holding you tight" },
-            { time: 233.17, text: "Oxygen holds you" },
-            { time: 236.01, text: "Just like i used to" },
-            { time: 239.18, text: "Oxygen holds you all night" }
-        ];
-        
-        let currentLyricIndex = -1;
-        
-        function formatTime(seconds) {
-            const mins = Math.floor(seconds / 60);
-            const secs = Math.floor(seconds % 60);
-            return `${mins}:${secs.toString().padStart(2, '0')}`;
+<!-- SCATTERED STARS -->
+<center>
+<font size="1" color="#556688">*&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;.</font>
+</center>
+<br>
+
+<!-- AUDIO PLAYER -->
+<fieldset>
+<legend><font size="2" color="#88ccff"><b>&#9658; FLICKER</b></font></legend>
+<br>
+<center>
+<table cellpadding="5" cellspacing="2" border="0">
+<tr>
+<td bgcolor="#223355">
+<button onclick="toggleAudio()" id="playBtn" style="background:#3366aa; border:2px solid #88ccff; padding:8px 16px; cursor:pointer;"><font size="3" color="#ffffff"><b>&#9658; PLAY</b></font></button>
+</td>
+<td bgcolor="#1a2840">
+<a href="03 Flicker.wav" download><font size="2" color="#88ccff"><b>&#11015; DOWNLOAD WAV</b></font></a>
+</td>
+</tr>
+</table>
+<br>
+<audio id="audio1" controls>
+    <source src="03 Flicker.wav" type="audio/wav">
+    Your browser does not support the audio element.
+</audio>
+</center>
+<br>
+</fieldset>
+
+<!-- NOW PLAYING -->
+<div id="nowPlaying" hidden>
+<br>
+<table width="100%" cellpadding="8" cellspacing="0" border="1" bordercolor="#334466" bgcolor="#141e30">
+<tr><td>
+<font size="2" color="#88ccff">
+<b>&#9835; NOW PLAYING:</b> Flicker
+&nbsp;|&nbsp;
+<tt><span id="currentTime">0:00</span> / <span id="totalTime">4:37</span></tt>
+</font>
+<br><br>
+<blockquote>
+<font size="3" color="#ffdd88"><i><span id="lyricsDisplay">[ lyrics loading... ]</span></i></font>
+</blockquote>
+</td></tr>
+</table>
+</div>
+
+<br>
+
+<!-- CONSTELLATION -->
+<center>
+<pre><font size="1" color="#445577">
+    *       .    *
+  .    *  .        .
+      .       *
+   *      .      *
+</font></pre>
+</center>
+
+<!-- BANDCAMP -->
+<table width="100%" cellpadding="8" cellspacing="0" border="1" bordercolor="#446688" bgcolor="#141e30">
+<tr><td>
+<font size="2" color="#aaddff"><b>&#9733; SUPPORT DIRECTLY</b></font>
+<hr size="1" color="#334466">
+<font size="2">
+&#8226; <a href="https://iamdavehawkins.bandcamp.com/track/flicker" target="_blank" rel="noopener">Bandcamp</a>
+</font>
+<br>
+<font size="1" color="#667799"><i>(pay what you want)</i></font>
+</td></tr>
+</table>
+
+<br>
+
+<!-- STREAM FROM A BILLIONAIRE -->
+<table width="100%" cellpadding="8" cellspacing="0" border="1" bordercolor="#444466" bgcolor="#181828">
+<tr><td>
+<font size="2" color="#9999bb"><b>&#128176; STREAM FROM A BILLIONAIRE</b></font>
+<hr size="1" color="#333355">
+<font size="2">
+&#8226; <a href="https://open.spotify.com/track/0HVvWcCCVHqXqTphKwdQiO" target="_blank" rel="noopener">Spotify</a>
+&nbsp;&#8226; <a href="https://music.apple.com/us/album/flicker/1798174029?i=1798174032" target="_blank" rel="noopener">Apple Music</a>
+&nbsp;&#8226; <a href="https://music.youtube.com/watch?v=LXl0dYbRVVQ" target="_blank" rel="noopener">YouTube Music</a>
+</font>
+</td></tr>
+</table>
+
+<br>
+
+<!-- STARS -->
+<center>
+<font size="1" color="#556688">
+<tt>. * . * . * . * . * . * .</tt>
+</font>
+</center>
+
+<br>
+
+<!-- LYRICS -->
+<fieldset>
+<legend><font size="2" color="#88ccff"><b>&#128214; LYRICS</b></font></legend>
+<blockquote>
+
+<table width="100%" cellpadding="8" cellspacing="0" border="0">
+<tr><td bgcolor="#101825">
+<font size="2" color="#c8d8e8">
+it's time to board three two one<br>
+in your eyes i thought i saw the sun the same<br>
+sun's shining in my eyes now<br>
+i wish said goodbye a million times just to keep you<br>
+in my arms, so harm'd have to break through me too<br>
+one day you knew this is what you'd do<br>
+gotta find your truth, what it means to one<br>
+but everyone is gonna hold their breath
+</font>
+</td></tr>
+</table>
+
+<br>
+
+<table width="100%" cellpadding="12" cellspacing="0" border="1" bordercolor="#446688" bgcolor="#182838">
+<tr><td align="center">
+<font size="3" color="#ffdd88"><i>
+not the end<br>
+not the arc<br>
+<b>just a flicker in the dark</b><br>
+<br>
+scene by scene<br>
+cut quickly<br>
+on a reel that won't repeat
+</i></font>
+</td></tr>
+</table>
+
+<br>
+
+<table width="100%" cellpadding="8" cellspacing="0" border="0">
+<tr><td bgcolor="#101825">
+<font size="2" color="#c8d8e8">
+they paved the stars, they sold the sky<br>
+bought all the ships so only they could fly<br>
+they wrote the rules, they hid the map<br>
+they lock the doors, they don't look back<br>
+they clip your wings, they say you're safe<br>
+then say you should say thanks for that<br>
+well you become a match, you become a key<br>
+make their kingdom catch, and everything<br>
+is gonna hold it's breath
+</font>
+</td></tr>
+</table>
+
+<br>
+
+<table width="100%" cellpadding="12" cellspacing="0" border="1" bordercolor="#446688" bgcolor="#182838">
+<tr><td align="center">
+<font size="3" color="#ffdd88"><i>
+not the end<br>
+not the arc<br>
+<b>just a flicker in the dark</b><br>
+<br>
+scene by scene<br>
+cut quickly<br>
+on a reel that won't repeat
+</i></font>
+</td></tr>
+</table>
+
+<br>
+
+<table width="100%" cellpadding="12" cellspacing="0" border="2" bordercolor="#557799" bgcolor="#0a1520">
+<tr><td align="center">
+<font size="3" color="#aaddff"><i>
+oxygen holds you<br>
+just like i used to<br>
+oxygen holding you tight<br>
+<br>
+oxygen holds you<br>
+just like i used to<br>
+<b>oxygen holds you all night</b>
+</i></font>
+</td></tr>
+</table>
+
+</blockquote>
+</fieldset>
+
+<br>
+
+<!-- NEWSLETTER -->
+<table width="100%" cellpadding="10" cellspacing="0" border="2" bordercolor="#446688" bgcolor="#141e30">
+<tr><td>
+<font size="2" color="#88ccff"><b>&#9993; GET UPDATES</b></font>
+<hr size="1" color="#334466">
+<form action="https://buttondown.com/api/emails/embed-subscribe/iamdavehawkins" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/iamdavehawkins', 'popupwindow')">
+    <label for="email"><font size="2" color="#8899bb">Email:</font></label>
+    <input type="email" name="email" id="email" placeholder="your@email.com" size="25">
+    <input type="submit" value="&#10003; Subscribe">
+    <input type="hidden" value="1" name="embed">
+</form>
+<font size="1" color="#556677"><i>new songs, shows, and signals from the dark</i></font>
+</td></tr>
+</table>
+
+<hr size="2" color="#334466" noshade>
+
+<!-- STARS FOOTER -->
+<center>
+<pre><font size="1" color="#445566">
+  .    *    .
+    *    .    *
+  .    *    .
+</font></pre>
+</center>
+
+<!-- FOOTER -->
+<center>
+<font size="1" color="#556677">*&nbsp;&nbsp;.&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;.&nbsp;&nbsp;*</font>
+<br><br>
+<font size="1" color="#667788">&copy; 2025 Dave Hawkins</font>
+<br>
+<font size="1"><a href="https://links.iamdavehawkins.com" target="_blank" rel="noopener">iamdavehawkins.com</a></font>
+</center>
+
+<br>
+
+<marquee behavior="alternate" scrollamount="1" width="100%">
+<font size="1" color="#445566">* . * just a flicker in the dark * . *</font>
+</marquee>
+
+</td></tr>
+</table>
+
+</center>
+
+<script>
+const audio = document.getElementById('audio1');
+const nowPlaying = document.getElementById('nowPlaying');
+const lyricsDisplay = document.getElementById('lyricsDisplay');
+const currentTimeEl = document.getElementById('currentTime');
+const totalTimeEl = document.getElementById('totalTime');
+const playBtn = document.getElementById('playBtn');
+let currentLyricIndex = -1;
+
+const lyricsData = [
+    { time: 0, text: "..." },
+    { time: 23.76, text: "It's time to board three two one" },
+    { time: 26.56, text: "In your eyes i thought i saw the sun the same" },
+    { time: 29.67, text: "Sun's shining in my eyes now" },
+    { time: 31.93, text: "I wish said goodbye a million times just to keep you" },
+    { time: 35.52, text: "In my arms, so harm'd have to" },
+    { time: 37.61, text: "Break through me too one day you knew this is" },
+    { time: 41.34, text: "What you'd do, gotta find your truth" },
+    { time: 43.96, text: "What it means to one but everyone" },
+    { time: 46.72, text: "Is gonna hold their breath" },
+    { time: 52.23, text: "Not the end" },
+    { time: 55.24, text: "Not the arc" },
+    { time: 58.12, text: "Just a flicker in the dark" },
+    { time: 64.07, text: "Scene by scene" },
+    { time: 67.02, text: "Cut quickly" },
+    { time: 70.03, text: "On a reel that won't repeat" },
+    { time: 84.64, text: "They paved the stars, they sold the sky" },
+    { time: 87.38, text: "Bought all the ships so only they could fly" },
+    { time: 90.26, text: "They wrote the rules, they hid the map" },
+    { time: 93.29, text: "They lock the doors, they don't look back" },
+    { time: 96.35, text: "They clip your wings, they say you're safe" },
+    { time: 99.20, text: "Then say you should say thanks for that" },
+    { time: 101.98, text: "Well you become a match, you become a key" },
+    { time: 105.18, text: "Make their kingdom catch, and everything" },
+    { time: 107.49, text: "Is gonna hold it's breath" },
+    { time: 113.10, text: "Not the end" },
+    { time: 116.03, text: "Not the arc" },
+    { time: 119.08, text: "Just a flicker in the dark" },
+    { time: 124.87, text: "Scene by scene" },
+    { time: 127.86, text: "Cut quickly" },
+    { time: 130.71, text: "On a reel that won't repeat" },
+    { time: 178.25, text: "Not the end" },
+    { time: 181.42, text: "Not the arc" },
+    { time: 184.27, text: "Just a flicker in the dark" },
+    { time: 190.01, text: "Scene by scene" },
+    { time: 193.25, text: "Cut quickly" },
+    { time: 196.19, text: "On a reel that won't repeat" },
+    { time: 221.14, text: "Oxygen holds you" },
+    { time: 224.19, text: "Just like i used to" },
+    { time: 227.16, text: "Oxygen holding you tight" },
+    { time: 233.17, text: "Oxygen holds you" },
+    { time: 236.01, text: "Just like i used to" },
+    { time: 239.18, text: "Oxygen holds you all night" }
+];
+
+function formatTime(seconds) {
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return mins + ':' + secs.toString().padStart(2, '0');
+}
+
+function getCurrentLyricIndex(time) {
+    for (let i = lyricsData.length - 1; i >= 0; i--) {
+        if (time >= lyricsData[i].time) {
+            return i;
         }
-        
-        function getCurrentLyricIndex(time) {
-            for (let i = lyricsData.length - 1; i >= 0; i--) {
-                if (time >= lyricsData[i].time) {
-                    return i;
-                }
-            }
-            return -1;
-        }
-        
-        function updateLyrics(time) {
-            const newIndex = getCurrentLyricIndex(time);
-            
-            if (newIndex !== currentLyricIndex) {
-                currentLyricIndex = newIndex;
-                
-                if (currentLyricIndex > 0) {
-                    lyricPrev.textContent = lyricsData[currentLyricIndex - 1].text;
-                    lyricPrev.classList.remove('hidden', 'lyric-intro');
-                } else if (currentLyricIndex === 0) {
-                    lyricPrev.textContent = `${songTitle} — ${artistName} — Lyrics`;
-                    lyricPrev.classList.remove('hidden');
-                    lyricPrev.classList.add('lyric-intro');
-                } else {
-                    lyricPrev.textContent = '';
-                    lyricPrev.classList.add('hidden');
-                }
-                
-                if (currentLyricIndex >= 0) {
-                    lyricCurrent.textContent = lyricsData[currentLyricIndex].text;
-                    lyricCurrent.classList.remove('lyric-intro');
-                } else {
-                    lyricCurrent.textContent = `${songTitle} — ${artistName} — Lyrics`;
-                    lyricCurrent.classList.add('lyric-intro');
-                }
-                
-                if (currentLyricIndex < lyricsData.length - 1 && currentLyricIndex >= 0) {
-                    lyricNext.textContent = lyricsData[currentLyricIndex + 1].text;
-                    lyricNext.classList.remove('hidden');
-                } else if (currentLyricIndex === -1 && lyricsData.length > 0) {
-                    lyricNext.textContent = lyricsData[0].text;
-                    lyricNext.classList.remove('hidden');
-                } else {
-                    lyricNext.textContent = '';
-                    lyricNext.classList.add('hidden');
-                }
-            }
-        }
-        
-        function updateProgress() {
-            if (audio.duration) {
-                const percent = (audio.currentTime / audio.duration) * 100;
-                progressBar.style.width = percent + '%';
-                currentTimeEl.textContent = formatTime(audio.currentTime);
-                totalTimeEl.textContent = formatTime(audio.duration);
-                updateLyrics(audio.currentTime);
-            }
-        }
-        
-        playBtn.addEventListener('click', () => {
-            if (audio.paused) {
-                audio.play();
-                playBtn.classList.add('playing');
-                playerProgress.classList.add('active');
-                lyricsPlayer.classList.add('active');
-                currentLyricIndex = -2; // Reset to force update
-                updateLyrics(audio.currentTime);
-            } else {
-                audio.pause();
-                playBtn.classList.remove('playing');
-            }
-        });
-        
-        progressContainer.addEventListener('click', (e) => {
-            if (audio.duration) {
-                const rect = progressContainer.getBoundingClientRect();
-                const percent = (e.clientX - rect.left) / rect.width;
-                audio.currentTime = percent * audio.duration;
-            }
-        });
-        
-        audio.addEventListener('timeupdate', updateProgress);
-        
-        audio.addEventListener('loadedmetadata', () => {
-            totalTimeEl.textContent = formatTime(audio.duration);
-        });
-        
-        audio.addEventListener('ended', () => {
-            playBtn.classList.remove('playing');
-            playerProgress.classList.remove('active');
-            lyricsPlayer.classList.remove('active');
-            progressBar.style.width = '0%';
-            currentTimeEl.textContent = '0:00';
-            currentLyricIndex = -1;
-        });
-        
-        // Credits Modal
-        const creditsLink = document.getElementById('creditsLink');
-        const creditsModal = document.getElementById('creditsModal');
-        const creditsModalClose = document.getElementById('creditsModalClose');
-        
-        creditsLink.addEventListener('click', () => {
-            creditsModal.classList.add('active');
-        });
-        
-        creditsModalClose.addEventListener('click', () => {
-            creditsModal.classList.remove('active');
-        });
-        
-        creditsModal.addEventListener('click', (e) => {
-            if (e.target === creditsModal) {
-                creditsModal.classList.remove('active');
-            }
-        });
-    </script>
+    }
+    return -1;
+}
+
+function updateLyrics() {
+    const time = audio.currentTime;
+    const newIndex = getCurrentLyricIndex(time);
+    
+    if (newIndex < 0) {
+        const timeToFirst = Math.ceil(lyricsData[1].time - time);
+        lyricsDisplay.textContent = '[ lyrics in ' + timeToFirst + 's... ]';
+    } else if (newIndex !== currentLyricIndex) {
+        currentLyricIndex = newIndex;
+        lyricsDisplay.textContent = lyricsData[newIndex].text;
+    }
+}
+
+function toggleAudio() {
+    if (audio.paused) {
+        audio.play();
+        nowPlaying.hidden = false;
+        playBtn.innerHTML = '<font size="3" color="#ffffff"><b>&#10074;&#10074; PAUSE</b></font>';
+    } else {
+        audio.pause();
+        playBtn.innerHTML = '<font size="3" color="#ffffff"><b>&#9658; PLAY</b></font>';
+    }
+}
+
+audio.addEventListener('play', function() {
+    nowPlaying.hidden = false;
+    playBtn.innerHTML = '<font size="3" color="#ffffff"><b>&#10074;&#10074; PAUSE</b></font>';
+});
+
+audio.addEventListener('pause', function() {
+    playBtn.innerHTML = '<font size="3" color="#ffffff"><b>&#9658; PLAY</b></font>';
+});
+
+audio.addEventListener('timeupdate', function() {
+    currentTimeEl.textContent = formatTime(audio.currentTime);
+    if (audio.duration) {
+        totalTimeEl.textContent = formatTime(audio.duration);
+    }
+    updateLyrics();
+});
+
+audio.addEventListener('ended', function() {
+    nowPlaying.hidden = true;
+    currentLyricIndex = -1;
+    lyricsDisplay.textContent = '';
+    playBtn.innerHTML = '<font size="3" color="#ffffff"><b>&#9658; PLAY</b></font>';
+});
+</script>
+
 </body>
 </html>
